@@ -1,7 +1,7 @@
 .patients-list {
     max-width: 90%;
     margin: 40px auto;
-    padding: 0 20px;
+    padding:  20px;
   }
   
   .patients-list-header {
@@ -36,6 +36,7 @@
   
   .patient-item:hover {
     background-color: #f0f0f0;
+    margin-top: 1px;
   }
   
   .empty-row {

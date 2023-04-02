@@ -1,36 +1,60 @@
 .top-header {
-    background-color: #663399;
-    padding: 10px 0;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  
-  .logo {
-    margin-left: 20px;
-    max-height: 60px;
-  }
-  
-  .header {
-    display: flex;
-    background-color: #9370db;
-    padding: 10px 20px;
-    justify-content: space-evenly;
-  }
-  
-  .nav-link {
-    margin-right: 20px;
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-link:hover {
-    color: #c0c0c0;
-  }
-  
-  .nav-link-active {
-    color: #c0c0c0;
-    font-weight: bold;
-  }
-  
+  background-color: #663399;
+  padding: 10px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo {
+  margin-left: 20px;
+  max-height: 60px;
+}
+
+.header {
+  display: flex;
+  background-color: #9370db;
+  justify-content: flex-start;
+  padding: 10px 20px;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  flex-grow: 1; /* Add this line */
+  justify-content: space-around; /* Add this line */
+  margin-left: auto; /* Add this line */
+}
+
+.nav-link {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #c0c0c0;
+}
+
+.nav-link-active {
+  color: #c0c0c0;
+  font-weight: bold;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Add this line */
+}
+
+.profile-image {
+  max-height: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.profile-text {
+  color: #fff;
+  font-weight: bold;
+}
