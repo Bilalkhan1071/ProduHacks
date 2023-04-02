@@ -4,7 +4,10 @@ import './PatientDetails.css';
 
 function PatientDetails({ patients, addActivityLog }) {
     const { patientID } = useParams();
-    const [medicines, setMedicines] = useState([]);
+    const [medicines, setMedicines] = useState(() => {
+        const storedMedicines = localStorage.getItem(`medicines-${patientID}`);
+        return storedMedicines ? JSON.parse(storedMedicines) : [];
+    });
     const [newMedicine, setNewMedicine] = useState('');
     const [showReminderForm, setShowReminderForm] = useState(false);
 
@@ -16,10 +19,20 @@ function PatientDetails({ patients, addActivityLog }) {
 
     const addMedicine = () => {
         if (newMedicine.trim().length > 0) {
-            setMedicines([...medicines, newMedicine.trim()]);
+            const updatedMedicines = [...medicines, newMedicine.trim()];
+            setMedicines(updatedMedicines);
             setNewMedicine('');
+            localStorage.setItem(`medicines-${patientID}`, JSON.stringify(updatedMedicines));
         }
     };
+
+    const removeMedicine = (index) => {
+        const updatedMedicines = medicines.filter((_, i) => i !== index);
+        setMedicines(updatedMedicines);
+        localStorage.setItem(`medicines-${patientID}`, JSON.stringify(updatedMedicines));
+    };
+
+
 
     const handleSendReminder = () => {
         setShowReminderForm(true);
@@ -68,11 +81,19 @@ function PatientDetails({ patients, addActivityLog }) {
                     </div>
                 </div>
                 <div className="patient-details-right">
-                    {}
+                    { }
                     <h3>Medicines</h3>
                     <ul>
                         {medicines.map((medicine, index) => (
-                            <li key={index}>{medicine}</li>
+                            <li key={index} className="medicine-item">
+                                {medicine}
+                                <button
+                                    className="delete-medicine-button"
+                                    onClick={() => removeMedicine(index)}
+                                >
+                                    X
+                                </button>
+                            </li>
                         ))}
                     </ul>
                     <input
