@@ -1,0 +1,193 @@
+.patient-details-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 50px auto;
+    max-width: 1200px;
+  }
+  
+  .patient-details {
+    display: flex;
+    background-color: purple;
+    color: white;
+    padding: 20px;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  }
+  
+  .patient-details-left,
+  .patient-details-right {
+    width: 50%;
+    margin-right: 20px;
+  }
+  
+  .patient-details-right {
+    margin-right: 0;
+  }
+  
+  .patient-details-table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+  }
+  
+  .patient-details-table th {
+    text-align: left;
+    padding: 5px 10px;
+    border-bottom: 2px solid white;
+  }
+  
+  .patient-details-table td {
+    padding: 5px 10px;
+    border-bottom: 1px solid white;
+  }
+  
+  .patient-details-send-reminder {
+    text-align: center;
+  }
+  
+  .patient-details-send-reminder button {
+    background-color: white;
+    color: purple;
+    border: 2px solid white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin: 0 auto;
+  }
+  
+  .patient-details-send-reminder button:hover {
+    background-color: purple;
+    color: white;
+  }
+  
+  .patient-details-right {
+    background-color: purple;
+    color: white;
+    padding: 20px;
+    width: 50%;
+  }
+  
+  .patient-details-right h3 {
+    margin-top: 0;
+  }
+  
+  .patient-details-right ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  .patient-details-right li {
+    margin-bottom: 10px;
+  }
+  
+  .patient-details-right input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .patient-details-right button {
+    background-color: white;
+    color: purple;
+    border: 2px solid white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .patient-details-right button:hover {
+    background-color: purple;
+    color: white;
+  }
+  
+  .reminder-form-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+  
+  .reminder-form {
+    background-color: white;
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  }
+  
+  .reminder-form h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  .patient-details-reminder-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  
+  .patient-details-reminder-name {
+    font-weight: bold;
+  }
+  
+  .patient-details-reminder-id {
+    margin-left: 10px;
+    color: gray;
+  }
+  
+  .patient-details-reminder-input {
+    margin-bottom: 20px;
+  }
+  
+  .patient-details-reminder-input label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .patient-details-reminder-input input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+  }
+  
+  .patient-details-reminder-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .patient-details-reminder-buttons button {
+    background-color: #5a5a9a;
+    color: white;
+    border: 2px solid #5a5a9a;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .patient-details-reminder-buttons button:hover {
+    background-color: white;
+    color: #5a5a9a;
+  }

@@ -1,0 +1,24 @@
+.help-log-container {
+    padding: 20px;
+  }
+  
+  .help-log-box {
+    background-color: #9370db;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .help-request {
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .help-request:last-child {
+    border-bottom: none;
+  }
+  
